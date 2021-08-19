@@ -8,7 +8,11 @@
 import UIKit
 
 class AttendTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var teacherTitleLabel: UILabel!
+    @IBOutlet weak var subjectTitleLabel: UILabel!
+    @IBOutlet weak var classTitleLabel: UILabel!
+    @IBOutlet weak var mainView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

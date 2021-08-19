@@ -63,7 +63,7 @@
                         <color key="titleColor" systemColor="opaqueSeparatorColor"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-bH-Ad5">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-bH-Ad5">
                     <rect key="frame" x="64" y="505" width="286" height="48"/>
                     <color key="backgroundColor" systemColor="systemPinkColor"/>
                     <constraints>

@@ -18,31 +18,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arabic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgN-Ta-lFy">
-                        <rect key="frame" x="16" y="10" width="49" height="21"/>
+                        <rect key="frame" x="16" y="10" width="49" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.18823529411764706" green="0.37254901960784315" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr. Ayman " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-sM-GPB">
-                        <rect key="frame" x="16" y="39" width="84.5" height="21"/>
+                        <rect key="frame" x="16" y="40" width="84.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.94509803921568625" green="0.5490196078431373" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-cA-UGq">
-                        <rect key="frame" x="113" y="10" width="128" height="21"/>
+                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-cA-UGq" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="113" y="10" width="128" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="128" id="xzo-kJ-2hB"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
-                                <integer key="value" value="4"/>
+                                <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                 <real key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                <real key="value" value="30"/>
+                                <real key="value" value="22"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
                                 <color key="value" red="0.9882352941176471" green="0.83137254901960778" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,18 +56,19 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
                                 <integer key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="assigments"/>
-                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="arrow-forward"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="starFill"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="starEmpty"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SS0-YT-EDv">
-                        <rect key="frame" x="295" y="10.5" width="34" height="23.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="SS0-YT-EDv">
+                        <rect key="frame" x="295" y="10" width="34" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="34" id="7kS-K8-ucE"/>
                             <constraint firstAttribute="height" constant="24" id="cCa-OF-Aag"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="1" green="0.96078431372549022" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="mgN-Ta-lFy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3Sz-gC-ylT"/>
                     <constraint firstItem="OoU-cA-UGq" firstAttribute="leading" secondItem="mgN-Ta-lFy" secondAttribute="trailing" constant="48" id="3lD-fp-YWE"/>
@@ -81,12 +82,24 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lessonNameLabel" destination="mgN-Ta-lFy" id="ArR-6i-irs"/>
+                <outlet property="mainView" destination="H2p-sc-9uM" id="VXQ-k3-BF0"/>
+                <outlet property="messageImageView" destination="SS0-YT-EDv" id="WPU-5P-Afo"/>
+                <outlet property="rateCosmosView" destination="OoU-cA-UGq" id="OeZ-6T-d1c"/>
+                <outlet property="teacherNameLabel" destination="dXW-sM-GPB" id="iiK-gr-y7i"/>
+            </connections>
             <point key="canvasLocation" x="141.30434782608697" y="63.616071428571423"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="OoU-cA-UGq">
+            <size key="intrinsicContentSize" width="130" height="22"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="arrow-forward" width="16" height="13"/>
-        <image name="assigments" width="30" height="29.5"/>
-        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="message" width="34" height="27.5"/>
+        <image name="starEmpty" width="15.5" height="15"/>
+        <image name="starFill" width="15.5" height="15"/>
     </resources>
 </document>

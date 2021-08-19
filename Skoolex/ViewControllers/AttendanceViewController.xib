@@ -1,22 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttendanceViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttendanceViewController" customModule="Skoolex" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="p01-mU-vDZ" id="Knz-S6-mFN"/>
+                <outlet property="logoImageView" destination="q8m-AR-mNq" id="ZbN-gj-7WX"/>
+                <outlet property="mainView" destination="4yk-3z-4rD" id="OJq-hh-P4s"/>
+                <outlet property="segmentControl" destination="r9s-7I-jfJ" id="gve-KG-dfg"/>
+                <outlet property="timeTableLabel" destination="utz-rK-Age" id="Q9W-8N-k0b"/>
+                <outlet property="timeTableView" destination="VKg-H4-JF5" id="376-Fe-jhN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notficationsBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-aP-QvK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utz-rK-Age">
+                    <rect key="frame" x="124" y="85" width="166" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p01-mU-vDZ">
+                    <rect key="frame" x="16" y="38" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="K4t-nD-sj7"/>
+                        <constraint firstAttribute="width" constant="32" id="p3O-Io-ObS"/>
+                    </constraints>
+                    <state key="normal" image="back"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-AR-mNq">
+                    <rect key="frame" x="134" y="38" width="146" height="39"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yk-3z-4rD">
+                    <rect key="frame" x="0.0" y="131.5" width="414" height="764.5"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r9s-7I-jfJ">
+                            <rect key="frame" x="57" y="8" width="300" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="BMU-m4-vnr"/>
+                                <constraint firstAttribute="width" constant="300" id="p4V-rJ-Fwc"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Sunday"/>
+                                <segment title="Monday"/>
+                                <segment title="Tuesday"/>
+                            </segments>
+                        </segmentedControl>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VKg-H4-JF5">
+                            <rect key="frame" x="0.0" y="64" width="414" height="700.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="RiJ-bi-AcX"/>
+                                <outlet property="delegate" destination="-1" id="bkL-RA-fII"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="r9s-7I-jfJ" firstAttribute="centerX" secondItem="4yk-3z-4rD" secondAttribute="centerX" id="8vX-So-9M2"/>
+                        <constraint firstItem="r9s-7I-jfJ" firstAttribute="top" secondItem="4yk-3z-4rD" secondAttribute="top" constant="8" id="BUf-3o-OQX"/>
+                        <constraint firstItem="VKg-H4-JF5" firstAttribute="top" secondItem="r9s-7I-jfJ" secondAttribute="bottom" constant="8" id="Cfy-lo-qWe"/>
+                        <constraint firstAttribute="bottom" secondItem="VKg-H4-JF5" secondAttribute="bottom" id="PYg-iz-CpG"/>
+                        <constraint firstItem="VKg-H4-JF5" firstAttribute="leading" secondItem="4yk-3z-4rD" secondAttribute="leading" id="QKl-CZ-WHC"/>
+                        <constraint firstAttribute="trailing" secondItem="VKg-H4-JF5" secondAttribute="trailing" id="TY1-36-rfk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4yk-3z-4rD" secondAttribute="trailing" id="4E3-jx-QaI"/>
+                <constraint firstItem="q8m-AR-mNq" firstAttribute="centerX" secondItem="dFl-aP-QvK" secondAttribute="centerX" id="4sZ-LO-cha"/>
+                <constraint firstItem="utz-rK-Age" firstAttribute="centerX" secondItem="q8m-AR-mNq" secondAttribute="centerX" id="4xQ-oV-2Em"/>
+                <constraint firstItem="4yk-3z-4rD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FnG-ve-pD3"/>
+                <constraint firstAttribute="bottom" secondItem="dFl-aP-QvK" secondAttribute="bottom" id="GRA-vy-DR7"/>
+                <constraint firstItem="4yk-3z-4rD" firstAttribute="centerX" secondItem="utz-rK-Age" secondAttribute="centerX" id="NLo-Hy-aSo"/>
+                <constraint firstItem="dFl-aP-QvK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VFn-1H-5xW"/>
+                <constraint firstItem="utz-rK-Age" firstAttribute="top" secondItem="q8m-AR-mNq" secondAttribute="bottom" constant="8" id="W8j-jB-g7A"/>
+                <constraint firstAttribute="bottom" secondItem="4yk-3z-4rD" secondAttribute="bottom" id="YPL-bR-Jbv"/>
+                <constraint firstItem="p01-mU-vDZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="c5D-2X-u52"/>
+                <constraint firstItem="dFl-aP-QvK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fuK-pf-nKW"/>
+                <constraint firstAttribute="trailing" secondItem="dFl-aP-QvK" secondAttribute="trailing" id="iYD-P7-Xuu"/>
+                <constraint firstItem="p01-mU-vDZ" firstAttribute="top" secondItem="q8m-AR-mNq" secondAttribute="top" id="mJo-rr-GVN"/>
+                <constraint firstItem="4yk-3z-4rD" firstAttribute="top" secondItem="utz-rK-Age" secondAttribute="bottom" constant="8" id="o47-uB-Gat"/>
+                <constraint firstItem="q8m-AR-mNq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="38" id="uBN-er-jhY"/>
+                <constraint firstItem="utz-rK-Age" firstAttribute="top" secondItem="q8m-AR-mNq" secondAttribute="bottom" constant="8" id="yZO-zz-DAi"/>
+            </constraints>
+            <point key="canvasLocation" x="10" y="46"/>
         </view>
     </objects>
+    <resources>
+        <image name="back" width="44" height="44"/>
+        <image name="logo" width="146" height="39"/>
+        <image name="notficationsBackground1" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

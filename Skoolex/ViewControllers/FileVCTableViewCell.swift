@@ -9,6 +9,11 @@ import UIKit
 
 class FileVCTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var publishLabel: UILabel!
+    @IBOutlet weak var kindLabel: UILabel!
+    @IBOutlet weak var subjectTitleLabel: UILabel!
+    @IBOutlet weak var mainView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

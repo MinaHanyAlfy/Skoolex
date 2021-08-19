@@ -1,21 +1,82 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="NotificationTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationTableViewCell" rowHeight="105" id="KGk-i7-Jjw" customClass="NotificationTableViewCell" customModule="Skoolex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="105"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="355" height="105"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content" translatesAutoresizingMaskIntoConstraints="NO" id="daG-MT-xWh">
+                        <rect key="frame" x="20" y="17" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="Mnb-ok-ID2"/>
+                            <constraint firstAttribute="width" constant="48" id="qh5-Jf-Z6i"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New notification inside this profile go search for another view please" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-mt-eEr">
+                        <rect key="frame" x="76" y="17" width="184" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="184" id="NUM-Y2-gBM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:20 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-py-Y5h">
+                        <rect key="frame" x="276" y="17" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notficationsBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-bc-jae">
+                        <rect key="frame" x="330" y="46" width="9" height="9"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="9" id="Q5X-05-Zy6"/>
+                            <constraint firstAttribute="height" constant="9" id="kEJ-Mv-JG6"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="i2x-py-Y5h" firstAttribute="leading" secondItem="U3Q-mt-eEr" secondAttribute="trailing" constant="16" id="0CM-6T-bZ3"/>
+                    <constraint firstItem="daG-MT-xWh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="AyB-CG-wPz"/>
+                    <constraint firstItem="U3Q-mt-eEr" firstAttribute="top" secondItem="daG-MT-xWh" secondAttribute="top" id="Jz3-KC-XJE"/>
+                    <constraint firstItem="daG-MT-xWh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="NXQ-d1-wdR"/>
+                    <constraint firstItem="U3Q-mt-eEr" firstAttribute="leading" secondItem="daG-MT-xWh" secondAttribute="trailing" constant="8" symbolic="YES" id="TaW-p7-DPY"/>
+                    <constraint firstItem="U3Q-mt-eEr" firstAttribute="bottom" secondItem="daG-MT-xWh" secondAttribute="bottom" id="Wxg-BW-Mir"/>
+                    <constraint firstItem="T1T-bc-jae" firstAttribute="top" secondItem="i2x-py-Y5h" secondAttribute="bottom" constant="8" id="acN-Wj-qcb"/>
+                    <constraint firstItem="T1T-bc-jae" firstAttribute="trailing" secondItem="i2x-py-Y5h" secondAttribute="trailing" id="eoF-dG-4Zn"/>
+                    <constraint firstItem="i2x-py-Y5h" firstAttribute="top" secondItem="daG-MT-xWh" secondAttribute="top" id="kzr-Ui-uDf"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="U3Q-mt-eEr" id="fUH-Ub-LiP"/>
+                <outlet property="kindImageView" destination="daG-MT-xWh" id="oAl-LR-Fbr"/>
+                <outlet property="mainView" destination="H2p-sc-9uM" id="FsH-u3-69y"/>
+                <outlet property="newNotficationImageView" destination="T1T-bc-jae" id="qiE-ZD-Zds"/>
+                <outlet property="timeLabel" destination="i2x-py-Y5h" id="fGQ-vd-Xlv"/>
+            </connections>
+            <point key="canvasLocation" x="63.04347826086957" y="57.924107142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="content" width="29" height="29.5"/>
+        <image name="notficationsBackground1" width="375" height="812"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

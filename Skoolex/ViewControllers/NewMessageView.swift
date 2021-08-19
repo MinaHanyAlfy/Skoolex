@@ -8,7 +8,8 @@
 import UIKit
 
 class NewMessageView: UIView {
-
+    @IBOutlet weak var backGroundView: UIView!
+  
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -16,5 +17,11 @@ class NewMessageView: UIView {
         // Drawing code
     }
     */
+    class func instanceFromNib() -> NewMessageView {
+            let view = UINib(nibName: "NewMessageView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! NewMessageView
+        
+            return view
+    }
 
 }
+

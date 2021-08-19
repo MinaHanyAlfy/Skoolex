@@ -1,22 +1,127 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalenderViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalenderViewController" customModule="Skoolex" customModuleProvider="target">
             <connections>
+                <outlet property="calenderLabel" destination="8si-kx-1Ej" id="2X5-QT-Csy"/>
+                <outlet property="calenderViewFS" destination="IAu-nZ-grV" id="6kg-6X-Fhc"/>
+                <outlet property="menuBtn" destination="Aad-p0-T8Y" id="yYj-Oe-egC"/>
+                <outlet property="segmantControl" destination="FbG-mD-AQq" id="2Yj-4N-Wdc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="q5H-Vg-ddK">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aad-p0-T8Y">
+                    <rect key="frame" x="366" y="38" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="0h9-Kf-o8z"/>
+                        <constraint firstAttribute="width" constant="32" id="SOV-Ne-L5d"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="menu"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Pjx-T7-iYA">
+                    <rect key="frame" x="134" y="38" width="146" height="39"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8si-kx-1Ej">
+                    <rect key="frame" x="136" y="85" width="142" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYy-1P-RN1">
+                    <rect key="frame" x="0.0" y="131.5" width="414" height="764.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAu-nZ-grV" customClass="FSCalendar">
+                            <rect key="frame" x="0.0" y="16" width="414" height="252"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="252" id="7e6-8Q-1Er"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                    <color key="value" red="0.94509803921568625" green="0.59607843137254901" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                    <color key="value" red="0.94509803920000002" green="0.59607843140000005" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FbG-mD-AQq">
+                            <rect key="frame" x="52" y="316" width="310" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="4K4-1s-xB6"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Vacation"/>
+                                <segment title="Events"/>
+                            </segments>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IAu-nZ-grV" secondAttribute="trailing" id="8JY-vh-4J7"/>
+                        <constraint firstItem="FbG-mD-AQq" firstAttribute="top" secondItem="IAu-nZ-grV" secondAttribute="bottom" constant="48" id="G0I-ZU-0Yv"/>
+                        <constraint firstAttribute="trailing" secondItem="FbG-mD-AQq" secondAttribute="trailing" constant="52" id="Gjw-Rx-FgQ"/>
+                        <constraint firstItem="IAu-nZ-grV" firstAttribute="leading" secondItem="vYy-1P-RN1" secondAttribute="leading" id="PsV-P3-b2Z"/>
+                        <constraint firstItem="FbG-mD-AQq" firstAttribute="leading" secondItem="vYy-1P-RN1" secondAttribute="leading" constant="52" id="ei7-yZ-2ar"/>
+                        <constraint firstItem="IAu-nZ-grV" firstAttribute="top" secondItem="vYy-1P-RN1" secondAttribute="top" constant="16" id="f7Z-ul-dCq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Pjx-T7-iYA" firstAttribute="centerX" secondItem="q5H-Vg-ddK" secondAttribute="centerX" id="44a-js-eiS"/>
+                <constraint firstItem="Pjx-T7-iYA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="38" id="6f8-lW-QYy"/>
+                <constraint firstAttribute="trailing" secondItem="q5H-Vg-ddK" secondAttribute="trailing" id="9TM-ZT-f8A"/>
+                <constraint firstItem="8si-kx-1Ej" firstAttribute="centerX" secondItem="q5H-Vg-ddK" secondAttribute="centerX" id="AhB-eL-Blk"/>
+                <constraint firstItem="vYy-1P-RN1" firstAttribute="top" secondItem="8si-kx-1Ej" secondAttribute="bottom" constant="8" id="Ajc-Da-bye"/>
+                <constraint firstItem="8si-kx-1Ej" firstAttribute="top" secondItem="Pjx-T7-iYA" secondAttribute="bottom" constant="8" id="CeB-dA-SrC"/>
+                <constraint firstAttribute="trailing" secondItem="Aad-p0-T8Y" secondAttribute="trailing" constant="16" id="Dkw-Iv-qlo"/>
+                <constraint firstAttribute="trailing" secondItem="vYy-1P-RN1" secondAttribute="trailing" id="Fcb-Gm-p0W"/>
+                <constraint firstAttribute="bottom" secondItem="vYy-1P-RN1" secondAttribute="bottom" id="J8V-8P-xYE"/>
+                <constraint firstItem="vYy-1P-RN1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MFl-br-6X6"/>
+                <constraint firstItem="Aad-p0-T8Y" firstAttribute="top" secondItem="Pjx-T7-iYA" secondAttribute="top" id="e0I-b7-Lj9"/>
+                <constraint firstItem="q5H-Vg-ddK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fnX-wy-qbD"/>
+                <constraint firstAttribute="bottom" secondItem="q5H-Vg-ddK" secondAttribute="bottom" id="r9W-fe-kWi"/>
+                <constraint firstItem="q5H-Vg-ddK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x6Y-5O-lLB"/>
+                <constraint firstItem="8si-kx-1Ej" firstAttribute="centerX" secondItem="Pjx-T7-iYA" secondAttribute="centerX" id="yo3-TU-tCt"/>
+            </constraints>
+            <point key="canvasLocation" x="128.98550724637681" y="45.535714285714285"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo" width="146" height="39"/>
+        <image name="menu" width="44" height="44"/>
+        <image name="notificationBackground2" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

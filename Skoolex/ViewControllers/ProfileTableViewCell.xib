@@ -1,21 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" rowHeight="70" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="Skoolex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="345" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="announcments" translatesAutoresizingMaskIntoConstraints="NO" id="LzG-GV-R9y">
+                        <rect key="frame" x="4" y="4" width="48" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="h7r-Pl-1Qr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjN-zb-RYs">
+                        <rect key="frame" x="60" y="4" width="120" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="Byl-sz-Par"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mina Hany Alfy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-ad-fzA">
+                        <rect key="frame" x="212" y="24.5" width="114" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mjN-zb-RYs" firstAttribute="bottom" secondItem="LzG-GV-R9y" secondAttribute="bottom" id="K8W-4C-MSR"/>
+                    <constraint firstItem="NTy-ad-fzA" firstAttribute="leading" secondItem="mjN-zb-RYs" secondAttribute="trailing" constant="32" id="VlE-3f-YeV"/>
+                    <constraint firstItem="mjN-zb-RYs" firstAttribute="leading" secondItem="LzG-GV-R9y" secondAttribute="trailing" constant="8" id="d38-vw-4yU"/>
+                    <constraint firstItem="NTy-ad-fzA" firstAttribute="centerY" secondItem="mjN-zb-RYs" secondAttribute="centerY" id="eOx-Yf-a9v"/>
+                    <constraint firstItem="mjN-zb-RYs" firstAttribute="top" secondItem="LzG-GV-R9y" secondAttribute="top" id="rtH-mP-KFe"/>
+                    <constraint firstItem="LzG-GV-R9y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="s25-39-Au6"/>
+                    <constraint firstAttribute="bottom" secondItem="LzG-GV-R9y" secondAttribute="bottom" constant="4" id="t3d-gL-yhU"/>
+                    <constraint firstItem="LzG-GV-R9y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="vvZ-lA-hj2"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="defineLabel" destination="NTy-ad-fzA" id="p9C-FG-FfY"/>
+                <outlet property="entityImageView" destination="LzG-GV-R9y" id="Ebr-BL-9kf"/>
+                <outlet property="typeLabel" destination="mjN-zb-RYs" id="hn8-E0-gwS"/>
+            </connections>
+            <point key="canvasLocation" x="147.10144927536234" y="54.241071428571423"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="announcments" width="31" height="31"/>
+    </resources>
 </document>
