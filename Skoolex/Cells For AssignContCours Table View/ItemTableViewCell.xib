@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="ItemTableViewCell" customModule="Skoolex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="345" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arabic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgN-Ta-lFy">
+                        <rect key="frame" x="16" y="10" width="49" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mr. Ayman " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-sM-GPB">
+                        <rect key="frame" x="16" y="39" width="84.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-cA-UGq">
+                        <rect key="frame" x="113" y="10" width="128" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="128" id="xzo-kJ-2hB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                <color key="value" red="0.9882352941176471" green="0.83137254901960778" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                <color key="value" red="0.98823529409999999" green="0.83137254900000002" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                <color key="value" red="0.9882352941176471" green="0.83137254901960778" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="assigments"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="arrow-forward"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SS0-YT-EDv">
+                        <rect key="frame" x="295" y="10.5" width="34" height="23.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="7kS-K8-ucE"/>
+                            <constraint firstAttribute="height" constant="24" id="cCa-OF-Aag"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mgN-Ta-lFy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3Sz-gC-ylT"/>
+                    <constraint firstItem="OoU-cA-UGq" firstAttribute="leading" secondItem="mgN-Ta-lFy" secondAttribute="trailing" constant="48" id="3lD-fp-YWE"/>
+                    <constraint firstItem="OoU-cA-UGq" firstAttribute="bottom" secondItem="mgN-Ta-lFy" secondAttribute="bottom" id="I3d-SF-9mX"/>
+                    <constraint firstItem="SS0-YT-EDv" firstAttribute="top" secondItem="OoU-cA-UGq" secondAttribute="top" id="KH6-pt-EgB"/>
+                    <constraint firstItem="dXW-sM-GPB" firstAttribute="leading" secondItem="mgN-Ta-lFy" secondAttribute="leading" id="NHW-Pu-14l"/>
+                    <constraint firstAttribute="trailing" secondItem="SS0-YT-EDv" secondAttribute="trailing" constant="16" id="lPQ-wh-9Ry"/>
+                    <constraint firstItem="mgN-Ta-lFy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="p2P-hx-Cx3"/>
+                    <constraint firstItem="OoU-cA-UGq" firstAttribute="top" secondItem="mgN-Ta-lFy" secondAttribute="top" id="pLd-TP-U1d"/>
+                    <constraint firstItem="dXW-sM-GPB" firstAttribute="top" secondItem="mgN-Ta-lFy" secondAttribute="bottom" constant="8" symbolic="YES" id="vz2-iJ-3Ly"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="141.30434782608697" y="63.616071428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow-forward" width="16" height="13"/>
+        <image name="assigments" width="30" height="29.5"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

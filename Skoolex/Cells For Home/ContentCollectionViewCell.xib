@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ContentCollectionViewCell" id="gTV-IL-0wX" customClass="ContentCollectionViewCell" customModule="Skoolex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-rc-1b2">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="130"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPT-ag-p1P">
+                                <rect key="frame" x="16" y="84" width="88" height="30"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.54901960780000003" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="SBa-Rc-3jn"/>
+                                </constraints>
+                                <state key="normal" title="Attend">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grammer :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byP-EA-BK0">
+                                <rect key="frame" x="16" y="16" width="80.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpy-mk-ixl">
+                                <rect key="frame" x="100.5" y="16" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Publish :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La7-MH-51A">
+                                <rect key="frame" x="16" y="39" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/02/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBQ-cz-jp1">
+                                <rect key="frame" x="85" y="39" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content" translatesAutoresizingMaskIntoConstraints="NO" id="rR9-DT-Zc6">
+                                <rect key="frame" x="193" y="16" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="HKK-Ba-bgs"/>
+                                    <constraint firstAttribute="height" constant="64" id="beJ-BY-CHH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="La7-MH-51A" firstAttribute="top" secondItem="byP-EA-BK0" secondAttribute="bottom" constant="2" id="232-MC-0ye"/>
+                            <constraint firstItem="Wpy-mk-ixl" firstAttribute="leading" secondItem="byP-EA-BK0" secondAttribute="trailing" constant="4" id="AGK-x7-zGP"/>
+                            <constraint firstItem="Wpy-mk-ixl" firstAttribute="top" secondItem="byP-EA-BK0" secondAttribute="top" id="GVr-tx-fmu"/>
+                            <constraint firstAttribute="trailing" secondItem="rR9-DT-Zc6" secondAttribute="trailing" constant="16" id="HpI-zm-kVs"/>
+                            <constraint firstItem="sBQ-cz-jp1" firstAttribute="bottom" secondItem="La7-MH-51A" secondAttribute="bottom" id="Obg-T7-WUZ"/>
+                            <constraint firstItem="sBQ-cz-jp1" firstAttribute="top" secondItem="La7-MH-51A" secondAttribute="top" id="PVt-G8-PQu"/>
+                            <constraint firstItem="rR9-DT-Zc6" firstAttribute="top" secondItem="Wpy-mk-ixl" secondAttribute="top" id="PXj-9G-tRh"/>
+                            <constraint firstItem="byP-EA-BK0" firstAttribute="leading" secondItem="0fa-rc-1b2" secondAttribute="leading" constant="16" id="b09-fK-QNC"/>
+                            <constraint firstItem="La7-MH-51A" firstAttribute="leading" secondItem="byP-EA-BK0" secondAttribute="leading" id="beP-6e-cQ2"/>
+                            <constraint firstItem="Wpy-mk-ixl" firstAttribute="bottom" secondItem="byP-EA-BK0" secondAttribute="bottom" id="hl8-ap-Zjz"/>
+                            <constraint firstItem="byP-EA-BK0" firstAttribute="top" secondItem="0fa-rc-1b2" secondAttribute="top" constant="16" id="io3-74-Eak"/>
+                            <constraint firstItem="SPT-ag-p1P" firstAttribute="leading" secondItem="La7-MH-51A" secondAttribute="leading" id="khS-zW-sG4"/>
+                            <constraint firstItem="sBQ-cz-jp1" firstAttribute="leading" secondItem="La7-MH-51A" secondAttribute="trailing" constant="4" id="klC-YO-GNo"/>
+                            <constraint firstItem="SPT-ag-p1P" firstAttribute="top" secondItem="La7-MH-51A" secondAttribute="bottom" constant="24" id="p5X-vy-IiO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0fa-rc-1b2" secondAttribute="trailing" id="3R1-EL-xOY"/>
+                <constraint firstItem="0fa-rc-1b2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mjb-Nq-3ZO"/>
+                <constraint firstAttribute="bottom" secondItem="0fa-rc-1b2" secondAttribute="bottom" id="sLx-Ta-KAy"/>
+                <constraint firstItem="0fa-rc-1b2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uT6-IR-fsz"/>
+            </constraints>
+            <size key="customSize" width="273" height="130"/>
+            <connections>
+                <outlet property="attendBtn" destination="SPT-ag-p1P" id="hIg-C8-QbC"/>
+                <outlet property="contentImageView" destination="rR9-DT-Zc6" id="Oup-eg-KIx"/>
+                <outlet property="grammerLabel" destination="byP-EA-BK0" id="Cae-vn-BRP"/>
+                <outlet property="lessonNameLabel" destination="Wpy-mk-ixl" id="7b6-sz-6bq"/>
+                <outlet property="mainView" destination="0fa-rc-1b2" id="gqN-Mr-sqw"/>
+                <outlet property="publishLabel" destination="La7-MH-51A" id="2fd-JZ-gQa"/>
+                <outlet property="publishedDateLabel" destination="sBQ-cz-jp1" id="9dI-Uh-bQP"/>
+            </connections>
+            <point key="canvasLocation" x="-23.913043478260871" y="84.375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="content" width="29" height="29.5"/>
+    </resources>
+</document>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuizCollectionViewCell" id="gTV-IL-0wX" customClass="QuizCollectionViewCell" customModule="Skoolex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB6-W2-36C">
+                        <rect key="frame" x="0.0" y="0.0" width="259" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z7-02-EtA">
+                                <rect key="frame" x="16" y="16" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c72-AJ-umk">
+                                <rect key="frame" x="16" y="41" width="45" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="nFZ-u6-5Rx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-p9-J4I">
+                                <rect key="frame" x="16" y="78" width="88" height="30"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.5490196078431373" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="Lr1-7r-5Zy"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.97639578579999997" green="0.97651261089999997" blue="0.97635620830000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quiz" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-eo-LvX">
+                                <rect key="frame" x="179" y="16" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="a8B-El-AFB"/>
+                                    <constraint firstAttribute="width" constant="64" id="pMc-95-B15"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwX-5B-f6O">
+                                <rect key="frame" x="73" y="16" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529411764706" green="0.37254901960784315" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/08/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UM-4s-c7N">
+                                <rect key="frame" x="69" y="41" width="87.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.18823529410000001" green="0.37254901959999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XKf-eo-LvX" firstAttribute="top" secondItem="0Z7-02-EtA" secondAttribute="top" id="1cK-xt-Df0"/>
+                            <constraint firstItem="c72-AJ-umk" firstAttribute="top" secondItem="0Z7-02-EtA" secondAttribute="bottom" constant="4" id="6mM-ag-GVM"/>
+                            <constraint firstItem="c72-AJ-umk" firstAttribute="leading" secondItem="0Z7-02-EtA" secondAttribute="leading" id="7WC-sZ-i22"/>
+                            <constraint firstItem="0Z7-02-EtA" firstAttribute="leading" secondItem="FB6-W2-36C" secondAttribute="leading" constant="16" id="DI0-gU-dri"/>
+                            <constraint firstItem="jZ7-p9-J4I" firstAttribute="leading" secondItem="c72-AJ-umk" secondAttribute="leading" id="FwK-Ye-l9o"/>
+                            <constraint firstItem="4UM-4s-c7N" firstAttribute="leading" secondItem="c72-AJ-umk" secondAttribute="trailing" constant="8" id="I59-pR-XYo"/>
+                            <constraint firstItem="WwX-5B-f6O" firstAttribute="top" secondItem="0Z7-02-EtA" secondAttribute="top" id="IrI-CE-fCa"/>
+                            <constraint firstAttribute="trailing" secondItem="XKf-eo-LvX" secondAttribute="trailing" constant="16" id="TXV-3Q-Hzw"/>
+                            <constraint firstItem="0Z7-02-EtA" firstAttribute="top" secondItem="FB6-W2-36C" secondAttribute="top" constant="16" id="Wuk-Ey-H1H"/>
+                            <constraint firstItem="WwX-5B-f6O" firstAttribute="leading" secondItem="0Z7-02-EtA" secondAttribute="trailing" constant="8" id="aqr-cR-273"/>
+                            <constraint firstItem="jZ7-p9-J4I" firstAttribute="top" secondItem="c72-AJ-umk" secondAttribute="bottom" constant="16" id="e9M-Of-3jc"/>
+                            <constraint firstItem="4UM-4s-c7N" firstAttribute="top" secondItem="c72-AJ-umk" secondAttribute="top" id="eL9-6A-uEW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FB6-W2-36C" secondAttribute="trailing" id="FkF-ZC-Cr5"/>
+                <constraint firstItem="FB6-W2-36C" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bGq-8i-5qA"/>
+                <constraint firstAttribute="bottom" secondItem="FB6-W2-36C" secondAttribute="bottom" id="oue-Rn-4Fz"/>
+                <constraint firstItem="FB6-W2-36C" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="twg-qQ-RFd"/>
+            </constraints>
+            <size key="customSize" width="259" height="150"/>
+            <connections>
+                <outlet property="dateLabel" destination="c72-AJ-umk" id="zTo-eb-hcw"/>
+                <outlet property="dateNumberLabel" destination="4UM-4s-c7N" id="k7q-He-u7v"/>
+                <outlet property="lessonNameLabel" destination="WwX-5B-f6O" id="o2J-fC-8H7"/>
+                <outlet property="mainViewCell" destination="FB6-W2-36C" id="26S-h7-y2q"/>
+                <outlet property="quizImageView" destination="XKf-eo-LvX" id="gdc-MN-JYf"/>
+                <outlet property="startBtn" destination="jZ7-p9-J4I" id="IUg-Fx-Tq5"/>
+                <outlet property="testNumLabel" destination="0Z7-02-EtA" id="Nbp-1l-nCe"/>
+            </connections>
+            <point key="canvasLocation" x="467.39130434782612" y="84.375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="quiz" width="27.5" height="28"/>
+    </resources>
+</document>
